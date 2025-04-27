@@ -1,0 +1,812 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>My Portfolio</title>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="mediaqueries.css" />
+  </head>
+  <body>
+    <nav id="desktop-nav">
+      <div class="logo">Sahil Mujawar</div>
+      <div>
+        <ul class="nav-links">
+          <li><a href="#">Home</a></li>
+          <li><a href="#about">About</a></li>
+          <li><a href="#experience">Experience</a></li>
+          <li><a href="#projects">Projects</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </div>
+    </nav>
+    <nav id="hamburger-nav">
+      <div class="logo">Sahil Mujawar</div>
+      <div class="hamburger-menu">
+        <div class="hamburger-icon" onclick="toggleMenu()">
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
+        <div class="menu-links">
+          <li><a href="#" onclick="toggleMenu()">Home</a></li>
+          <li><a href="#about" onclick="toggleMenu()">About</a></li>
+          <li><a href="#experience" onclick="toggleMenu()">Experience</a></li>
+          <li><a href="#projects" onclick="toggleMenu()">Projects</a></li>
+          <li><a href="#contact" onclick="toggleMenu()">Contact</a></li>
+        </div>
+      </div>
+    </nav>
+    <section id="profile">
+      <div class="section__pic-container">
+        <img src="./assets/profile-pic.png" alt="John Doe profile picture" />
+      </div>
+      <div class="section__text">
+        <p class="section__text__p1">Hello, I'm</p>
+        <h1 class="title">Sahil Mujawar</h1>
+        <p class="section__text__p2">Software Developer</p>
+        <div class="btn-container">
+          <button
+            class="btn btn-color-2"
+            onclick="window.open('./assets/Sahil_Mujawar_Resume.pdf')"
+          >
+            Download CV
+          </button>
+          <button class="btn btn-color-1" onclick="location.href='./#contact'">
+            Contact Info
+          </button>
+        </div>
+        <div id="socials-container">
+          <img
+            src="./assets/linkedin.png"
+            alt="My LinkedIn profile"
+            class="icon"
+            onclick="window.open('https://www.linkedin.com/in/sahil-mujawar-b1494211b/')"
+          />
+          <!-- <img
+            src="./assets/github.png"
+            alt="My Github profile"
+            class="icon"
+            onclick="location.href='https://github.com/'"
+          /> -->
+        </div>
+      </div>
+    </section>
+    <section id="about">
+      <p class="section__text__p1">Get To Know More</p>
+      <h1 class="title">About Me</h1>
+      <div class="section-container">
+        <div class="section__pic-container">
+          <img
+            src="./assets/about-pic.png"
+            alt="Profile picture"
+            class="about-pic"
+          />
+        </div>
+        <div class="about-details-container">
+          <div class="about-containers">
+            <div class="details-container">
+              <img
+                src="./assets/experience.png"
+                alt="Experience icon"
+                class="icon"
+              />
+              <h3>Experience</h3>
+              <p>8+ years <br />Software Development</p>
+            </div>
+            <div class="details-container">
+              <img
+                src="./assets/education.png"
+                alt="Education icon"
+                class="icon"
+              />
+              <h3>Education</h3>
+              <p>Project Management - IT<br />Bachelor of Engineering (Computers)</p>
+            </div>
+          </div>
+          <div class="text-container">
+            <p>
+              A Software Developer with experience specializing in Core-Banking and Financial technology solutions. Proven record in delivering 
+              high-impact projects for organizations like Capgemini, Axis Bank, and DXC Technology (former Hewlett-Packard Enterprise),
+              driving digital transformation, large-scale system migrations, and operational efficiencies. Skilled in java, Spring Boot, 
+              Oracle, Unix, Finacle and Agile methodologies, with strong expertise in microservices architecture, API development,
+              and DevOps tools like Jenkins. I combine strong technical expertise with a deep understanding of business
+              needs and stakeholder collaboration. I am passionate about building innovative, efficient, and scalable technology solutions
+              that drive measurable business value.
+            </p>
+          </div>
+        </div>
+      </div>
+      <img
+        src="./assets/arrow.png"
+        alt="Arrow icon"
+        class="icon arrow"
+        onclick="location.href='./#experience'"
+      />
+    </section>
+    <section id="experience">
+      <p class="section__text__p1">Explore My</p>
+      <h1 class="title">Experience</h1>
+ 
+      <div class="timeline">
+
+        <!-- Timeline Item 1 -->
+        <div class="timeline-item" title="Click here to know more..." onclick="openModal('modal-capgemini')">
+          <div class="timeline-date">Jan 2021 - Aug 2023</div>
+          <div class="timeline-content">
+            <h2>Capgemini</h2>
+            <p class="timeline-role">Senior Consultant</p>
+          </div>
+        </div>
+      
+        <!-- Timeline Item 2 -->
+        <div class="timeline-item" title="Click here to know more..." onclick="openModal('modal-axis')">
+          <div class="timeline-date">Sep 2019 - Dec 2020</div>
+          <div class="timeline-content">
+            <h2>Axis Bank</h2>
+            <p class="timeline-role">Deputy Manager</p>
+          </div>
+        </div>
+      
+        <!-- Timeline Item 3 -->
+        <div class="timeline-item" title="Click here to know more..." onclick="openModal('modal-dxc')">
+          <div class="timeline-date">May 2018 - Aug 2019</div>
+          <div class="timeline-content">
+            <h2>DXC Technology</h2>
+            <p class="timeline-role">Application Management Service Delivery</p>
+          </div>
+        </div>
+      
+        <!-- Timeline Item 4 -->
+        <div class="timeline-item" title="Click here to know more..." onclick="openModal('modal-saggezza')">
+          <div class="timeline-date">June 2015 - May 2018</div>
+          <div class="timeline-content">
+            <h2>Saggezza India Pvt Ltd</h2>
+            <p class="timeline-role">Software Developer</p>
+          </div>
+        </div>
+      
+      </div>
+
+      <div class="experience-details-container">
+        <div class="about-containers">
+          <div class="details-container">
+            <h2 class="experience-sub-title">Programming</h2>
+            <div class="article-container">
+              <article>
+                <img
+                  src="./assets/html-logo.jpeg"
+                  alt="Experience icon"
+                  class="icon"
+                />
+                <div>
+                  <h3>HTML</h3>
+                  <!-- <p>Experienced</p> -->
+                </div>
+              </article>
+              <article>
+                <img
+                  src="./assets/css-logo.jpeg"
+                  alt="Experience icon"
+                  class="icon"
+                />
+                <div>
+                  <h3>CSS</h3>
+                  <!-- <p>Experienced</p> -->
+                </div>
+              </article>
+              <article>
+                <img
+                  src="./assets/javascript-logo.jpeg"
+                  alt="Experience icon"
+                  class="icon"
+                />
+                <div>
+                  <h3>JavaScript</h3>
+                  <!-- <p>Intermediate</p> -->
+                </div>
+              </article>
+              <article>
+                <img
+                  src="./assets/java-logo.jpeg"
+                  alt="Experience icon"
+                  class="icon"
+                />
+                <div>
+                  <h3>Java</h3>
+                  <!-- <p>Basic</p> -->
+                </div>
+              </article>
+              <article>
+                <img
+                  src="./assets/spring-logo.jpeg"
+                  alt="Experience icon"
+                  class="icon"
+                />
+                <div>
+                  <h3>Spring Boot</h3>
+                  <!-- <p>Basic</p> -->
+                </div>
+              </article>
+              <article>
+                <img
+                  src="./assets/oracle-logo.jpeg"
+                  alt="Experience icon"
+                  class="icon"
+                />
+                <div>
+                  <h3>Oracle</h3>
+                  <!-- <p>Intermediate</p> -->
+                </div>
+              </article>
+              <article>
+                <img
+                  src="./assets/finacle-logo.jpeg"
+                  alt="Experience icon"
+                  class="icon"
+                />
+                <div>
+                  <h3>Finacle</h3>
+                  <!-- <p>Basic</p> -->
+                </div>
+              </article>
+              <article>
+                <img
+                  src="./assets/angular-logo.jpeg"
+                  alt="Experience icon"
+                  class="icon"
+                />
+                <div>
+                  <h3>Angular</h3>
+                  <!-- <p>Intermediate</p> -->
+                </div>
+              </article>              
+            </div>
+          </div>
+          <div class="details-container">
+            <h2 class="experience-sub-title">Technology</h2>
+            <div class="article-container">
+              <article>
+                <img
+                  src="./assets/jenkins-logo.png"
+                  alt="Experience icon"
+                  class="icon"
+                />
+                <div>
+                  <h3>Jenkins</h3>
+                  <!-- <p>Basic</p> -->
+                </div>
+              </article>
+              <article>
+                <img
+                  src="./assets/github-logo.jpeg"
+                  alt="Experience icon"
+                  class="icon"
+                />
+                <div>
+                  <h3>Github</h3>
+                  <!-- <p>Intermediate</p> -->
+                </div>
+              </article>
+              <article>
+                <img
+                  src="./assets/unix-logo.jpeg"
+                  alt="Experience icon"
+                  class="icon"
+                />
+                <div>
+                  <h3>Unix</h3>
+                  <!-- <p>Intermediate</p> -->
+                </div>
+              </article>
+              <article>
+                <img
+                  src="./assets/jfrog-logo.jpeg"
+                  alt="Experience icon"
+                  class="icon"
+                />
+                <div>
+                  <h3>Jfrog</h3>
+                  <!-- <p>Intermediate</p> -->
+                </div>
+              </article>
+              <article>
+                <img
+                  src="./assets/sonarqube-logo.jpeg"
+                  alt="Experience icon"
+                  class="icon"
+                />
+                <div>
+                  <h3>Sonarqube</h3>
+                  <!-- <p>Intermediate</p> -->
+                </div>
+              </article>
+              <article>
+                <img
+                  src="./assets/base24-logo.jpeg"
+                  alt="Experience icon"
+                  class="icon"
+                />
+                <div>
+                  <h3>Base24</h3>
+                  <!-- <p>Intermediate</p> -->
+                </div>
+              </article>
+              <article>
+                <img
+                  src="./assets/tandem-logo.jpeg"
+                  alt="Experience icon"
+                  class="icon"
+                />
+                <div>
+                  <h3>Tandem</h3>
+                  <!-- <p>Intermediate</p> -->
+                </div>
+              </article>
+              <article>
+                <img
+                  src="./assets/agile-logo.jpeg"
+                  alt="Experience icon"
+                  class="icon"
+                />
+                <div>
+                  <h3>Agile Scrum</h3>
+                  <!-- <p>Intermediate</p> -->
+                </div>
+              </article>                            
+            </div>
+          </div>
+        </div>
+      </div>
+      <img
+        src="./assets/arrow.png"
+        alt="Arrow icon"
+        class="icon arrow"
+        onclick="location.href='./#projects'"
+      />
+    </section>
+    <section id="projects">
+      <p class="section__text__p1">Browse My Recent</p>
+      <h1 class="title">Projects</h1>
+      <div class="experience-details-container">
+        <div class="about-containers">
+          <div class="details-container color-container" title="Click here to know more..." onclick="openModal('modal1')">
+            <div class="article-container">
+              <img
+                src="./assets/project-1.png"
+                alt="Project 1"
+                class="project-img"
+              />
+            </div>
+            <h2 class="experience-sub-title project-title">Migrated LIBOR/IBOR Corporate Loans to RFR</h2>
+            <!-- <div class="btn-container">
+              <button
+                class="btn btn-color-2 project-btn"
+                onclick="location.href='https://github.com/'"
+              >
+                Github
+              </button>
+              <button
+                class="btn btn-color-2 project-btn"
+                onclick="location.href='https://github.com/'"
+              >
+                Live Demo
+              </button>
+            </div> -->
+          </div>
+          <!-- Modal Structure -->
+          <div class="details-container color-container" title="Click here to know more..." onclick="openModal('modal2')">
+            <div class="article-container">
+              <img
+                src="./assets/project-2.png"
+                alt="Project 2"
+                class="project-img"
+              />
+            </div>
+            <h2 class="experience-sub-title project-title">Merger and Acquistion (Amalgamation)</h2>
+            <!-- <div class="btn-container">
+              <button
+                class="btn btn-color-2 project-btn"
+                onclick="location.href='https://github.com/'"
+              >
+                Github
+              </button>
+              <button
+                class="btn btn-color-2 project-btn"
+                onclick="location.href='https://github.com/'"
+              >
+                Live Demo
+              </button>
+            </div> -->
+          </div>
+          <div class="details-container color-container" title="Click here to know more..." onclick="openModal('modal3')">
+            <div class="article-container">
+              <img
+                src="./assets/project-3.png"
+                alt="Project 3"
+                class="project-img"
+              />
+            </div>
+            <h2 class="experience-sub-title project-title">Streamlined Tax Remittance</h2>
+            <!-- <div class="btn-container">
+              <button
+                class="btn btn-color-2 project-btn"
+                onclick="location.href='https://github.com/'"
+              >
+                Github
+              </button>
+              <button
+                class="btn btn-color-2 project-btn"
+                onclick="location.href='https://github.com/'"
+              >
+                Live Demo
+              </button>
+            </div> -->
+          </div>
+        </div>
+        <div class="about-containers">
+          <div class="details-container color-container" title="Click here to know more..." onclick="openModal('modal4')">
+            <div class="article-container">
+              <img
+                src="./assets/project-4.png"
+                alt="Project 4"
+                class="project-img"
+              />
+            </div>
+            <h2 class="experience-sub-title project-title">Charges Transaction Optimization</h2>
+            <!-- <div class="btn-container">
+              <button
+                class="btn btn-color-2 project-btn"
+                onclick="location.href='https://github.com/'"
+              >
+                Github
+              </button>
+              <button
+                class="btn btn-color-2 project-btn"
+                onclick="location.href='https://github.com/'"
+              >
+                Live Demo
+              </button>
+            </div> -->
+          </div>
+          <div class="details-container color-container" title="Click here to know more..." onclick="openModal('modal5')">
+            <div class="article-container">
+              <img
+                src="./assets/project-5.png"
+                alt="Project 5"
+                class="project-img"
+              />
+            </div>
+            <h2 class="experience-sub-title project-title">Real-time Transaction Monitoring</h2>
+            <!-- <div class="btn-container">
+              <button
+                class="btn btn-color-2 project-btn"
+                onclick="location.href='https://github.com/'"
+              >
+                Github
+              </button>
+              <button
+                class="btn btn-color-2 project-btn"
+                onclick="location.href='https://github.com/'"
+              >
+                Live Demo
+              </button>
+            </div> -->
+          </div>
+          <div class="details-container color-container" title="Click here to know more..." onclick="openModal('modal6')">
+            <div class="article-container">
+              <img
+                src="./assets/project-6.png"
+                alt="Project 6"
+                class="project-img"
+              />
+            </div>
+            <h2 class="experience-sub-title project-title">Digital Wealth Platform</h2>
+            <!-- <div class="btn-container">
+              <button
+                class="btn btn-color-2 project-btn"
+                onclick="location.href='https://github.com/'"
+              >
+                Github
+              </button>
+              <button
+                class="btn btn-color-2 project-btn"
+                onclick="location.href='https://github.com/'"
+              >
+                Live Demo
+              </button>
+            </div> -->
+          </div>
+        </div>   
+        <div class="about-containers">
+          <div class="details-container color-container" title="Click here to know more..." onclick="openModal('modal7')">
+            <div class="article-container">
+              <img
+                src="./assets/project-7.png"
+                alt="Project 7"
+                class="project-img"
+              />
+            </div>
+            <h2 class="experience-sub-title project-title">Fraud Risk Mitigation API</h2>
+            <!-- <div class="btn-container">
+              <button
+                class="btn btn-color-2 project-btn"
+                onclick="location.href='https://github.com/'"
+              >
+                Github
+              </button>
+              <button
+                class="btn btn-color-2 project-btn"
+                onclick="location.href='https://github.com/'"
+              >
+                Live Demo
+              </button>
+            </div> -->
+          </div>
+          <div class="details-container color-container" title="Click here to know more..." onclick="openModal('modal8')">
+            <div class="article-container">
+              <img
+                src="./assets/project-8.png"
+                alt="Project 8"
+                class="project-img"
+              />
+            </div>
+            <h2 class="experience-sub-title project-title">Seamless Data Integration</h2>
+            <!-- <div class="btn-container">
+              <button
+                class="btn btn-color-2 project-btn"
+                onclick="location.href='https://github.com/'"
+              >
+                Github
+              </button>
+              <button
+                class="btn btn-color-2 project-btn"
+                onclick="location.href='https://github.com/'"
+              >
+                Live Demo
+              </button>
+            </div> -->
+          </div>
+          <div class="details-container color-container" title="Click here to know more..." onclick="openModal('modal9')">
+            <div class="article-container">
+              <img
+                src="./assets/project-9.png"
+                alt="Project 9"
+                class="project-img"
+              />
+            </div>
+            <h2 class="experience-sub-title project-title">Automated Financial Reporting</h2>
+            <!-- <div class="btn-container">
+              <button
+                class="btn btn-color-2 project-btn"
+                onclick="location.href='https://github.com/'"
+              >
+                Github
+              </button>
+              <button
+                class="btn btn-color-2 project-btn"
+                onclick="location.href='https://github.com/'"
+              >
+                Live Demo
+              </button>
+            </div> -->
+          </div>
+        </div>  
+          <!-- Modal for Capgemini -->
+  <div id="modal-capgemini" class="modal">
+    <div class="modal-content">
+      <span class="close" onclick="closeModal('modal-capgemini')">&times;</span>
+      <h2>Capgemini - Roles and Responsibilities</h2>
+      <ul>
+        <li>Drive strategic planning and execution by collaborating with cross-functional Agile teams, participating in sprint planning, daily stand-ups, and retrospectives to implement technology-enabled solutions.</li>
+        <li>Analyze financial, operational, and regulatory risks; develop mitigation strategies, ensure compliance.</li>
+        <li>Identify and address inefficiencies in banking processes, focusing on operational efficiency and client service improvement.</li>
+        <li>Optimize the bank’s financial health through financial analysis and data-driven recommendations.</li>
+        <li>Conduct market research and competitive analysis to inform market entry and expansion strategies.</li>
+        <li>Conduct market research and competitive analysis to inform market entry and expansion strategies.</li>
+        <li>Collaborate with product teams to design and launch customer-centric financial products and services.</li>
+        <li>Build and maintain strong client relationships, providing expert advice to address financial challenges.</li>
+        <li>Stay abreast of banking regulations, ensuring operational and product compliance.</li>
+        <li>Lead the development and execution of systems integration projects and roadmaps, aligning technology solutions with business goals.</li>
+        <li>Facilitate stakeholder communication, ensuring clear and effective collaboration between business and technical teams.</li>
+        <li>Generate new business opportunities by developing innovative ideas and solutions for clients.</li>
+        <li>Deliver client engagements by collaborating with cross-functional teams to implement technology-enabled transformations.</li>
+        <li>Mentor and train junior consultants, providing leadership on complex projects and initiatives.</li>
+      </ul>
+    </div>
+  </div>
+
+  <!-- Modal for Axis Bank -->
+  <div id="modal-axis" class="modal">
+    <div class="modal-content">
+      <span class="close" onclick="closeModal('modal-axis')">&times;</span>
+      <h2>Axis Bank - Roles and Responsibilities</h2>
+      <ul>
+        <li>Recommend and design optimized business processes, ensuring alignment with the bank's technology strategy.</li>
+        <li>Analyze and interpret financial and customer data to support decision-making and strategy development.</li>
+        <li>Collaborate with IT teams to design feasible, cost-effective solutions aligned with business requirements.</li>
+        <li>Create detailed documentation of business requirements, process maps, and use cases throughout the project lifecycle.</li>
+        <li>Act as a liaison between business units and IT teams, ensuring clear communication and understanding of requirements.</li>
+        <li>Manage and cultivate relationships with stakeholders, ensuring their needs are addressed.</li>
+        <li>Define test cases and actively participate in user acceptance testing (UAT) to ensure solution compliance.</li>
+        <li>Identify and address system issues or defects and assist in planning and implementing changes to business processes and systems.</li>
+        <li>Develop and deliver training and communication materials to facilitate change adoption.</li>
+        <li>Stay current with banking regulations, ensuring proposed solutions adhere to regulatory guidelines.</li>
+        <li>Identify and assess potential risks associated with changes or projects and develop mitigation strategies.</li>
+        <li>Monitor implemented solutions, track key performance indicators (KPIs), and generate reports for management insights.</li>
+        <li>Proactively seek opportunities for ongoing improvement in business processes and systems.</li>
+        <li>Recommend and implement enhancements to drive efficiency and competitiveness.</li>
+        <li>Assist in project planning and management, including defining project scope, objectives, and timelines.</li>        
+        <li>Contribute to agile project delivery, driving iterative development and continuous improvement.</li>        
+        <li>Work in ambiguous, fast-paced environments while adapting to changing project priorities.</li>        
+      </ul>
+    </div>
+  </div>
+
+  <!-- Modal for DXC Technology -->
+  <div id="modal-dxc" class="modal">
+    <div class="modal-content">
+      <span class="close" onclick="closeModal('modal-dxc')">&times;</span>
+      <h2>DXC Technology - Roles and Responsibilities</h2>
+      <ul>
+        <li>Monitor critical banking applications for optimal performance and adherence to SLAs.</li>
+        <li>Swiftly respond to incidents, troubleshoot issues, and coordinate resolutions with stakeholders.</li>
+        <li>Analyze recurring problems, determine root causes, and implement long-term solutions for prevention.</li>
+        <li>Plan and manage application changes, updates, and enhancements, ensuring minimal disruption.</li>
+        <li>Coordinate smooth releases of new versions or features, minimizing impact on end-users.</li>
+        <li>Monitor resource utilization, plan for future capacity needs, and collaborate with vendors for support.</li>
+        <li>Define, track, and report on service levels and KPIs for application availability and reliability.</li>
+        <li>Maintain comprehensive documentation for troubleshooting and knowledge sharing.</li>
+        <li>Identify and implement improvements for application performance, security, and user experience.</li>
+        <li>Collaborate with cross-functional teams to identify and implement strategic technology solutions in financial services.</li>
+      </ul>
+    </div>
+  </div>
+  
+  <!-- Modal for Saggezza -->
+  <div id="modal-saggezza" class="modal">
+    <div class="modal-content">
+      <span class="close" onclick="closeModal('modal-saggezza')">&times;</span>
+      <h2>Saggezza Technology - Roles and Responsibilities</h2>
+      <ul>
+        <li>Design, code, and maintain banking software adhering to best practices and standards.</li>
+        <li>Collaborate with stakeholders to ensure applications align with business goals.</li>
+        <li>Integrate banking systems for seamless data flow and interoperability.</li>
+        <li>Implement security measures for data protection and regulatory compliance.</li>
+        <li>Conduct thorough testing to ensure software reliability and address defects.</li>
+        <li>Optimize application performance and scalability, especially during peak demand.</li>
+        <li>Maintain comprehensive documentation for troubleshooting and knowledge transfer.</li>
+        <li>Utilize version control systems for effective collaboration and code management.</li>
+        <li>Work closely with cross-functional teams to deliver high-quality software solutions.</li>
+        <li>Stay current with the latest technologies and continuously improve skills for enhanced efficiency.</li>
+      </ul>
+    </div>
+  </div>
+
+      </div>
+      <img
+        src="./assets/arrow.png"
+        alt="Arrow icon"
+        class="icon arrow"
+        onclick="location.href='./#contact'"
+      />
+    </section>
+    <div id="modal1" class="modal">
+      <div class="modal-content">
+        <span class="close" onclick="closeModal('modal1')">&times;</span>
+        <h2>Migrated LIBOR/IBOR Corporate Loans to RFR</h2>
+        <p>
+          Engineered a product for seamless corporate loan system migration from LIBOR/IBOR to RFR, aligning with industry standards and regulatory requirements.
+        </p>
+      </div>
+    </div>
+    <div id="modal2" class="modal">
+      <div class="modal-content">
+        <span class="close" onclick="closeModal('modal2')">&times;</span>
+        <h2>Migrated LIBOR/IBOR Corporate Loans to RFR</h2>
+        <p>
+          Developed a solution to support the seamless amalgamation of public sector banks Bank of Baroda, Dena Bank, and Vijaya Bank, unifying operational workflows and ensuring continuity across core systems.
+        </p>
+      </div>
+    </div>
+    <div id="modal3" class="modal">
+      <div class="modal-content">
+        <span class="close" onclick="closeModal('modal3')">&times;</span>
+        <h2>Migrated LIBOR/IBOR Corporate Loans to RFR</h2>
+        <p>
+          Implementation of TDS deduction under Section 194N and remittance to RBI, integrating with core banking systems to ensure compliance, reduce manual work, and enhance operational efficiency.
+        </p>
+      </div>
+    </div>
+    <div id="modal4" class="modal">
+      <div class="modal-content">
+        <span class="close" onclick="closeModal('modal4')">&times;</span>
+        <h2>Migrated LIBOR/IBOR Corporate Loans to RFR</h2>
+        <p>
+          Build a multi-threaded utility to recover monthly transaction charges for over 1 million accounts, reducing batch processing time from 10 hours to 4 hours and improving core banking system performance by 60%.
+      </div>
+    </div>
+    <div id="modal5" class="modal">
+      <div class="modal-content">
+        <span class="close" onclick="closeModal('modal5')">&times;</span>
+        <h2>Migrated LIBOR/IBOR Corporate Loans to RFR</h2>
+        <p>
+          Implemented a real-time analytics tool for monitoring ATM/POS, etc. transactions through the BASE24 Tandem Server, enabling early identification of transaction failures that caused business losses, financial penalties, and system downtime by 30%, enhancing operational control and reliability.
+        </p>
+      </div>
+    </div>
+    <div id="modal6" class="modal">
+      <div class="modal-content">
+        <span class="close" onclick="closeModal('modal6')">&times;</span>
+        <h2>Migrated LIBOR/IBOR Corporate Loans to RFR</h2>
+        <p>
+          Worked on an Angular-based application with Spring Boot microservices for a bank's Wealth Management Systems, ensuring a responsive user experience.
+        </p>
+      </div>
+    </div>
+    <div id="modal7" class="modal">
+      <div class="modal-content">
+        <span class="close" onclick="closeModal('modal7')">&times;</span>
+        <h2>Migrated LIBOR/IBOR Corporate Loans to RFR</h2>
+        <p>
+          Developed a critical API between CBC and FRMS for real-time transaction validation, fortifying security, and mitigating fraud risks.
+        </p>
+      </div>
+    </div>
+    <div id="modal8" class="modal">
+      <div class="modal-content">
+        <span class="close" onclick="closeModal('modal8')">&times;</span>
+        <h2>Migrated LIBOR/IBOR Corporate Loans to RFR</h2>
+        <p>
+          Developed an API for real-time data exchange between UNISER and core databases, ensuring consistent and reliable data flow across banking systems.
+        </p>
+      </div>
+    </div>
+    <div id="modal9" class="modal">
+      <div class="modal-content">
+        <span class="close" onclick="closeModal('modal9')">&times;</span>
+        <h2>Migrated LIBOR/IBOR Corporate Loans to RFR</h2>
+        <p>
+          Built an automated tool for daily financial reporting, improving accuracy and reducing manual effort by 90% in compliance-related processes.
+        </p>
+      </div>
+    </div>
+    <section id="contact">
+      <p class="section__text__p1">Get in Touch</p>
+      <h1 class="title">Contact Me</h1>
+      <div class="contact-info-upper-container">
+        <div class="contact-info-container">
+          <img
+            src="./assets/email.png"
+            alt="Email icon"
+            class="icon contact-icon email-icon"
+          />
+          <p><a href="mailto:sahilshael70@yahoo.com">sahilshael70@yahoo.com</a></p>
+        </div>
+        <div class="contact-info-container">
+          <img
+            src="./assets/linkedin.png"
+            alt="LinkedIn icon"
+            class="icon contact-icon"
+          />
+          <p><a href="https://www.linkedin.com/in/sahil-mujawar-b1494211b/" target="_blank">LinkedIn</a></p>
+        </div>
+      </div>
+    </section>
+    <footer>
+      <nav>
+        <div class="nav-links-container">
+          <ul class="nav-links">
+            <li><a href="#about">About</a></li>
+            <li><a href="#experience">Experience</a></li>
+            <li><a href="#projects">Projects</a></li>
+            <li><a href="#contact">Contact</a></li>
+          </ul>
+        </div>
+      </nav>
+      <p>Copyright &#169; <span id="year"></span> Sahil Mujawar. All Rights Reserved.</p>
+    </footer>
+    <script src="script.js"></script>
+  </body>
+</html>
